@@ -1,0 +1,28 @@
+
+public class car extends vehicle {
+
+	private String carType = "Toyota";
+	private String Model = "Hilux";
+	private int ManYear = 2009;
+	private String CarColor = "Gray";
+	private String Transmission = "Manual";
+	private int Maxspeed = 20;
+
+	public car(){
+
+	}
+	
+	@Override
+	public String  accelerate(){
+		return "The car has never override accelerating";
+	}
+	public String moving(){
+		return "The car is traveling in " + Maxspeed;
+	}
+	public String  stop(){
+		return "The car has override";
+	}
+	
+	
+
+}

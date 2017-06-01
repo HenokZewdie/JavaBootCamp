@@ -1,0 +1,77 @@
+
+import java.util.Scanner;
+
+public class RoboResumeAssignment {
+
+	public static void main(String[] args) throws Exception{
+		
+		String name, email;
+		String eduAchieve[] = new String[10];
+		String experiance[] = new String[10];
+		String skill[] = new String[20];
+		
+		String answer = null;
+		int countEduc=0;
+		int countExp = 0;
+		int countSkill = 0;
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the Name:   ");
+		name = input.nextLine();
+		System.out.println("Enter the email:   ");
+		email = input.nextLine();
+				
+		do{
+			countEduc +=1;
+			if (countEduc !=10){
+			System.out.println("Enter the Education:   ");
+			eduAchieve[countEduc - 1] = input.nextLine();
+			System.out.println("Do you want to continue:   ");
+			answer = input.nextLine();
+			}
+		}while(answer.equalsIgnoreCase("Y"));
+		
+		do{
+			countExp +=1;
+			if (countExp !=10){
+			System.out.println("Enter the Experiance:   ");
+			experiance[countExp - 1] = input.nextLine();
+			System.out.println("Do you want to continue:   ");
+			answer = input.nextLine();
+			}
+		}while(answer.equalsIgnoreCase("Y"));
+		
+		do{
+			countSkill +=1;
+			if (count !=10){
+			System.out.println("Enter the Skills:   ");
+			skill[count - 1] = input.nextLine();
+			System.out.println("Do you want to continue:   ");
+			answer = input.nextLine();
+			}
+		}while(answer.equalsIgnoreCase("Y"));
+		
+		System.out.println();
+		System.out.println(name);
+		System.out.println(email);
+		System.out.println();
+		
+		System.out.println("Education");
+		System.out.println();
+		
+	for(int i = 0; i< countEduc; i++){
+		System.out.println(eduAchieve[i]);
+	}	
+	for(int i = 0; i< countEduc; i++){
+		System.out.println(eduAchieve[i]);
+	}	
+	for(int i = 0; i< countEduc; i++){
+		System.out.println(eduAchieve[i]);
+	}	
+	
+	
+	
+	input.close();
+	}
+
+}

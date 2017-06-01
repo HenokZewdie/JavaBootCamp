@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class vehicle {
+	static int speed, initial;
+	public static void main(String[] args){
+		String carStatus;
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter car Status:  start or stop");
+
+		carStatus = input.nextLine();
+		if(carStatus.equalsIgnoreCase("start")){
+			start(carStatus);
+		}
+		else if(carStatus.equalsIgnoreCase("stop")){
+			stop(carStatus);
+		}
+		else {System.out.println("Wrong Input");}
+
+		System.out.println("Enter the car current Speed ");
+		speed = input.nextInt();
+		speeding(speed);
+		System.out.println("Enter the Car Initial speed ");
+		initial = input.nextInt();
+		accelerate(speed, initial);
+
+
+		input.close();	
+	}
+	public static void start(String carStatusArg) {
+
+	}
+	public static void accelerate(int last, int initial){
+		if (last > initial){System.out.println("The car is Accelerating");}
+		else if (last < initial) {System.out.println("The car is slowing down");}
+		else{System.out.println("The car is moving in constant speed");}
+	}
+	public static void speeding(int carSpeed){
+		System.out.println("The car is going  " + speed);
+	}
+	public static void stop(String carStatusArg){
+		System.out.println("The car has Starting");
+	}
+
+
+}

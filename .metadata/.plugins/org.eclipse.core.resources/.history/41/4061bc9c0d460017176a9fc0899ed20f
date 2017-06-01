@@ -1,0 +1,30 @@
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class DateAssignment
+{
+	public static void main(String args[])
+	{
+		
+		
+		
+		
+		int year;
+		
+		GregorianCalendar gc = new GregorianCalendar(2010,11,21);
+	
+		System.out.print("Day of Week: ");
+		System.out.println(gc.get(Calendar.DAY_OF_WEEK));
+
+		Date myDate = gc.getTime();
+		myDate.getTime();
+		
+				
+		System.out.print("Number of Days: ");
+
+		
+		
+	}
+}
+	

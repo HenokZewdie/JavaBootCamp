@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class car extends vehicle {
+
+	private static String carColor;
+	private String carType;
+	private int speed;
+	
+	Scanner input = new Scanner(System.in);
+		
+		
+	
+	public car(){
+		
+	}
+	public String start() {
+		
+		System.out.println("Enter the car model and color");
+		carColor = input.nextLine();
+		return carColor;
+	}
+			
+}

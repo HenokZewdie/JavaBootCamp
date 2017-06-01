@@ -1,0 +1,21 @@
+
+
+public class vehicle {
+	public vehicle(){
+
+	}
+
+	public String start(){
+		return "The car has started";
+	}
+	public String  accelerate(){
+		return "The car is accelerating";
+	}
+	public String moving(){
+		return "The car is traveling in 0.2m/s";
+	}
+	public String  stop(){
+		return "The car has stopped";
+	}
+
+}

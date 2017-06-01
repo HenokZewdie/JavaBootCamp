@@ -1,0 +1,17 @@
+
+
+public class carApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		car carObj = new car();
+		car carOverride = new car();
+		System.out.println(carObj.start());
+		System.out.println(carObj.accelerate());
+		System.out.println(carObj.moving());
+		System.out.println(carObj.stop());
+		
+	}
+
+}

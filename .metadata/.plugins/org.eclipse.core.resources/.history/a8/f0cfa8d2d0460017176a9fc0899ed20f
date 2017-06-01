@@ -1,0 +1,12 @@
+
+public class car extends vehicle {
+
+	private String carColor;
+	private String carType;
+	private int speed;
+	
+	public car(){
+		
+	}
+	
+}

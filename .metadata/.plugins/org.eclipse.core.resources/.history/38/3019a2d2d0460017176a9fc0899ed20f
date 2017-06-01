@@ -1,0 +1,19 @@
+
+public class vehicle {
+
+
+	public void starting() {
+	}
+	public void accelerate(){
+		
+	}
+	public void emissionTest(){
+		
+	}
+	public void stopped(){
+		
+	}
+	public void pass(){
+		
+	}
+}

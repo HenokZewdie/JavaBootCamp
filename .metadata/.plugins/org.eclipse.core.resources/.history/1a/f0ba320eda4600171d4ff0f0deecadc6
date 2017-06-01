@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class carApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		String carColor;
+		car carObj = new car();
+			Scanner input = new Scanner(System.in);
+		carColor = input.nextLine();
+		carObj.start(carColor);
+	}
+
+}

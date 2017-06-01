@@ -1,0 +1,83 @@
+
+import java.util.Scanner;
+
+public class RoboResumeAssignment {
+
+	public static void main(String[] args) throws Exception{
+		
+		String name, email;
+		String eduAchieve[] = new String[10];
+		String experiance[] = new String[10];
+		String skill[] = new String[20];
+		
+		String answer = null;
+		int countEduc=0;
+		int countExp = 0;
+		int countSkill = 0;
+		
+		Scanner input = new Scanner(System.in);
+		System.out.println("Enter the Name:   ");
+		name = input.nextLine();
+		System.out.println("Enter the email:   ");
+		email = input.nextLine();
+				
+		do{
+			countEduc +=1;
+			if (countEduc !=10){
+			System.out.println("Enter the Education:   ");
+			eduAchieve[countEduc - 1] = input.nextLine();
+			System.out.println("To Add more Education press Y , To go to Experiance press any key:");
+			answer = input.nextLine();
+			}
+		}while(answer.equalsIgnoreCase("Y"));
+		
+		do{
+			countExp +=1;
+			if (countExp !=10){
+			System.out.println("Enter the Experiance:   ");
+			experiance[countExp - 1] = input.nextLine();
+			System.out.println("To Add more Experiance press Y , To go to Skills press any key:");
+			answer = input.nextLine();
+			}
+		}while(answer.equalsIgnoreCase("Y"));
+		
+		do{
+			countSkill +=1;
+			if (countSkill !=10){
+			System.out.println("Enter the Skills:   ");
+			skill[countSkill - 1] = input.nextLine();
+			System.out.println("To Add more Experiance press Y , To Exit press any key:");
+			answer = input.nextLine();
+			}
+		}while(answer.equalsIgnoreCase("Y"));
+		
+		System.out.println();
+		System.out.println(name);
+		System.out.println(email);
+		System.out.println();
+		
+		System.out.println("Education");
+		System.out.println();
+		
+	for(int i = 0; i< countEduc; i++){
+		System.out.println(eduAchieve[i]);
+	}	
+	System.out.println();
+	System.out.println("Experiance");
+	
+	for(int i = 0; i< countExp; i++){
+		System.out.println(experiance[i]);
+	}	
+	System.out.println();
+	System.out.println("Skills");
+	
+	for(int i = 0; i< countSkill; i++){
+		System.out.println(skill[i]);
+	}	
+	
+	
+	
+	input.close();
+	}
+
+}

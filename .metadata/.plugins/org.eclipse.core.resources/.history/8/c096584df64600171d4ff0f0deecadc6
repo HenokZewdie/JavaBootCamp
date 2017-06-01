@@ -1,0 +1,10 @@
+
+
+public interface carInterface{
+
+	void openDoor();
+
+	void blockWindows();
+
+	int passengers=0;
+}

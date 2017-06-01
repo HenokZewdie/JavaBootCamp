@@ -1,0 +1,15 @@
+import java.util.Scanner;
+
+public class vehicle {
+	public vehicle(){
+		
+	}
+	
+	public String start(){
+		return "The car has started";
+	}
+public String  stop(){
+	return "The car has stopped";
+}
+
+}

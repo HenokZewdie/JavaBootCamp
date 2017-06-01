@@ -1,0 +1,20 @@
+
+public class car extends vehicle {
+
+	private String carColor;
+	private String carType;
+	private int speed;
+	public static void main(String[] args){
+	
+		
+	}	
+	public car(){
+		
+	}
+	@Override
+	public String start() {
+		return carColor;
+	}
+		
+	}
+
