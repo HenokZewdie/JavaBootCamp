@@ -1,0 +1,7 @@
+
+interface Bank{  
+float rateOfInterest(); 
+String justoutput();
+static int addNumber(){int x,  y;
+return 0;};
+}  

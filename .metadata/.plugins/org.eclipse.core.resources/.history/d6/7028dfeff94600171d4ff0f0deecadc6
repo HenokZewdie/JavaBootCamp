@@ -1,0 +1,16 @@
+class PNB implements Bank{  
+public float rateOfInterest(){return 9.7f;}
+
+@Override
+public String justoutput() {
+	// TODO Auto-generated method stub
+	return null;
+}
+
+@Override
+public int addNumber() {
+	int a = 25 ,b = 15;
+	
+	return a-b;
+}  
+}  

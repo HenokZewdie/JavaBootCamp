@@ -1,12 +1,15 @@
 
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.*;  
 
 public class RoboResumeAssignment {
 
 	public static void main(String[] args) throws Exception{
 
-		String name, email;
-		String eduAchieve[] = new String[10];
+		String name, email, educ;
+		ArrayList<String> eduAchieve = new ArrayList<String>();
+		//String eduAchieve[] = new String[10];
 		String experiance[] = new String[10];
 		String skill[] = new String[20];
 
@@ -25,13 +28,15 @@ public class RoboResumeAssignment {
 			countEduc +=1;
 			if (countEduc !=10){
 				System.out.println("Enter the Education:   ");
-				eduAchieve[countEduc - 1] = input.nextLine();
+				educ = input.nextLine();
+				eduAchieve.add(name);
+				//eduAchieve = input.nextLine();
 				System.out.println("To Add more Education press Y , To go to Experiance press any key:");
 				answer = input.nextLine();
 			}
 		}while(answer.equalsIgnoreCase("Y"));
 
-		do{
+		/*do{
 			countExp +=1;
 			if (countExp !=10){
 				System.out.println("Enter the Experiance:   ");
@@ -49,7 +54,7 @@ public class RoboResumeAssignment {
 				System.out.println("To Add more Experiance press Y , To Exit press any key:");
 				answer = input.nextLine();
 			}
-		}while(answer.equalsIgnoreCase("Y"));
+		}while(answer.equalsIgnoreCase("Y"));*/
 
 		System.out.println();
 		System.out.println(name);
@@ -60,7 +65,7 @@ public class RoboResumeAssignment {
 		System.out.println();
 
 		for(int i = 0; i< countEduc; i++){
-			System.out.println(eduAchieve[i]);
+			System.out.println(eduAchieve);
 		}	
 		System.out.println();
 		System.out.println("Experiance");
