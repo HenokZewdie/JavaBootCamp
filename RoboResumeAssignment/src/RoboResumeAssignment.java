@@ -1,4 +1,3 @@
-
 import java.util.*;  
 
 public class RoboResumeAssignment {
@@ -9,7 +8,6 @@ public class RoboResumeAssignment {
 		ArrayList<String> eduAchieve = new ArrayList<String>();
 		ArrayList<String> experiance = new ArrayList<String>();
 		ArrayList<String> skill = new ArrayList<String>();
-
 
 		int countEduc = 0;
 		int countExp = 0;
@@ -50,8 +48,6 @@ public class RoboResumeAssignment {
 			}
 		}while (!(toExit.equalsIgnoreCase(educ)));
 
-
-
 		System.out.println();
 		System.out.println(name);
 		System.out.println(email);
@@ -74,8 +70,6 @@ public class RoboResumeAssignment {
 		for (int i = 0; i < skill.size() - 1; i++) {
 			System.out.println(skill.get(i));
 		}
-
 		input.close();
 	}
-
 }
