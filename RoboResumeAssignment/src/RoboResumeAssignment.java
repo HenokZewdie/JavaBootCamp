@@ -1,20 +1,17 @@
 
-import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.*;  
 
 public class RoboResumeAssignment {
 
 	public static void main(String[] args) throws Exception{
 
-		String name, email, educ;
+		String email,  name, educ = null, toExit = "exit";
 		ArrayList<String> eduAchieve = new ArrayList<String>();
-		//String eduAchieve[] = new String[10];
-		String experiance[] = new String[10];
-		String skill[] = new String[20];
+		ArrayList<String> experiance = new ArrayList<String>();
+		ArrayList<String> skill = new ArrayList<String>();
 
-		String answer = null;
-		int countEduc=0;
+
+		int countEduc = 0;
 		int countExp = 0;
 		int countSkill = 0;
 
@@ -23,38 +20,37 @@ public class RoboResumeAssignment {
 		name = input.nextLine();
 		System.out.println("Enter the email:   ");
 		email = input.nextLine();
+		System.out.println("Enter the Education and type \"exit\" to continue:   ");
+		do{
+			countExp +=1; //
+			if (countExp !=10){ /*To restrict a max of 10 Educational Background*/
 
+				educ = input.nextLine();
+				eduAchieve.add(educ); /*store in the array list*/
+			}
+		}while (!(toExit.equalsIgnoreCase(educ)));
+
+		System.out.println("Enter the Experiance and type \"exit\" to continue:   ");
 		do{
 			countEduc +=1;
 			if (countEduc !=10){
-				System.out.println("Enter the Education:   ");
+
 				educ = input.nextLine();
-				eduAchieve.add(name);
-				//eduAchieve = input.nextLine();
-				System.out.println("To Add more Education press Y , To go to Experiance press any key:");
-				answer = input.nextLine();
+				experiance.add(educ);
 			}
-		}while(answer.equalsIgnoreCase("Y"));
+		}while (!(toExit.equalsIgnoreCase(educ)));
 
-		/*do{
-			countExp +=1;
-			if (countExp !=10){
-				System.out.println("Enter the Experiance:   ");
-				experiance[countExp - 1] = input.nextLine();
-				System.out.println("To Add more Experiance press Y , To go to Skills press any key:");
-				answer = input.nextLine();
-			}
-		}while(answer.equalsIgnoreCase("Y"));
-
+		System.out.println("Enter the skills and type \"exit\" :   ");
 		do{
 			countSkill +=1;
-			if (countSkill !=10){
-				System.out.println("Enter the Skills:   ");
-				skill[countSkill - 1] = input.nextLine();
-				System.out.println("To Add more Experiance press Y , To Exit press any key:");
-				answer = input.nextLine();
+			if (countSkill !=20){
+
+				educ = input.nextLine();
+				skill.add(educ);
 			}
-		}while(answer.equalsIgnoreCase("Y"));*/
+		}while (!(toExit.equalsIgnoreCase(educ)));
+
+
 
 		System.out.println();
 		System.out.println(name);
@@ -63,22 +59,21 @@ public class RoboResumeAssignment {
 
 		System.out.println("Education");
 		System.out.println();
-
-		for(int i = 0; i< countEduc; i++){
-			System.out.println(eduAchieve);
-		}	
+		for (int i = 0; i < eduAchieve.size() - 1; i++) {
+			System.out.println(eduAchieve.get(i));
+		} 
 		System.out.println();
 		System.out.println("Experiance");
-
-		for(int i = 0; i< countExp; i++){
-			System.out.println(experiance[i]);
-		}	
 		System.out.println();
-		System.out.println("Skills");
-
-		for(int i = 0; i< countSkill; i++){
-			System.out.println(skill[i]);
-		}	
+		for (int i = 0; i < experiance.size() - 1; i++) {/*-1 NOT to print the "exit"*/
+			System.out.println(experiance.get(i));
+		}
+		System.out.println();
+		System.out.println("Skill");
+		System.out.println();
+		for (int i = 0; i < skill.size() - 1; i++) {
+			System.out.println(skill.get(i));
+		}
 
 		input.close();
 	}
